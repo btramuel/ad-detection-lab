@@ -176,8 +176,7 @@ Built on real infrastructure, so it hit real problems — working through them w
 ```
 .
 ├── README.md
-├── docs/
-│   └── AD_Detection_Lab_Report.pdf      # polished write-up
+│  AD_Detection Lab Report.pdf           # polished write up
 ├── screenshots/                         # evidence from the live lab
 ├── scripts/
 │   └── Provision-LabAD.ps1              # idempotent OU/group/user provisioning
