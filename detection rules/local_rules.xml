@@ -1,0 +1,21 @@
+<!--
+  Custom Wazuh rule — Kerberoasting detection
+  Deploy to: /var/ossec/etc/rules/local_rules.xml on the Wazuh manager
+  Then: sudo systemctl restart wazuh-manager
+
+  Fires when a Kerberos service ticket (Event 4769) is requested with RC4
+  encryption (ticketEncryptionType 0x17) — the signature of Kerberoasting,
+  since modern AD uses AES. Raised to level 12 (high) and mapped to
+  MITRE ATT&CK T1558.003.
+-->
+<group name="kerberoasting,">
+  <rule id="100100" level="12">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^4769$</field>
+    <field name="win.eventdata.ticketEncryptionType">^0x17$</field>
+    <description>Kerberoasting: RC4 Kerberos service ticket (4769) requested</description>
+    <mitre>
+      <id>T1558.003</id>
+    </mitre>
+  </rule>
+</group>
