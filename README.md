@@ -16,7 +16,6 @@ This project walks the complete defensive loop a SOC or cloud-security engineer 
 (MITRE ATT&CK [T1558.003](https://attack.mitre.org/techniques/T1558/003/)), carried out from a Kali
 attacker box and detected end-to-end in Wazuh.
 
-> 📄 A polished PDF write-up is in [`docs/AD_Detection_Lab_Report.pdf`](docs/AD_Detection_Lab_Report.pdf).
 
 ---
 
